@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.heading {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: x-large;
+}
+.AddPhotoBtn {
+  border-radius: 75px;
+  height: 150px;
+  width: 150px;
+  margin-top: 150px;
+  font-size: medium;
+  font-weight: 500;
+}
+.dialog-section {
+  border: 2px solid black;
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 150px;
+}
+.profile {
+  font-size: medium;
+  font-weight: 500;
+  display: inline-flex;
+  /* justify-content: space-between; */
+  margin-right: 300px;
+}
+.ProfileUpload {
+  border-radius: 75px;
+  height: 150px;
+  width: 150px;
+}
+.cross {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+}
+.delbtn {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  margin-bottom: 5 px;
+  color: red;
+  margin-left: 200px;
+}
+
+.camera {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.upload {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.dialog-overlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border: none !important;
+  border-radius: calc(5px * var(--ratio));
+
+  padding: 1.6rem;
+  /* max-width: 400px; */
+}
+
+.dialog-section {
+  display: block;
+  background-color: white;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 50px 50px -12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: black;
+}
+
+/* #dialog::backdrop {
+  background-color: rgb(4, 4, 16);
+  backdrop-filter: blur(5px);
+}
+
+#openDialogButton {
+  cursor: pointer;
+}
+#dialogBox::backdrop {
+  opacity: 1;
+  background-color: rgb(25, 25, 170);
+  backdrop-filter: blur(5px);
+}
+#dialogBox {
+  box-shadow: 5px 10px #888888;
+  border-radius: 8px;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#dialogBox header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#deleteButton {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#closeDialogFooter {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} */
