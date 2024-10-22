@@ -8,16 +8,13 @@ import { MdOutlineFileUpload } from "react-icons/md";
 
 function DialogBox02() {
   const [ShowDialog, setShowDialog] = useState(false);
-  const [hide, setshow] = useState(true);
 
   const OpenDialog = () => {
     setShowDialog(true);
-    setshow(false);
   };
 
   const CloseDialog = () => {
     setShowDialog(false);
-    setshow(true);
   };
   return (
     <>
@@ -42,7 +39,7 @@ function DialogBox02() {
               </button>
             </div>
             <div>
-              <button className="upload">
+              <button className="upload" >
                 <MdOutlineFileUpload size={30} />
               </button>
               <button className="camera">

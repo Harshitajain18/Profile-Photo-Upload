@@ -1,48 +1,48 @@
-import React, {useRef} from "react";
-import './DialogBox01.css'
+// import React, {useRef} from "react";
+// import './DialogBox01.css'
 
-function DialogBox01() {
-  const dialogElement = useRef();
-  let dialogBoxId = document.getElementById("dialogBox");
+// function DialogBox01() {
+//   const dialogElement = useRef();
+//   let dialogBoxId = document.getElementById("dialogBox");
 
-  function showDialog() {
-    console.log(dialogElement.current);
-    
-    dialogElement.current.showModal();
-  }
+//   function showDialog() {
+//     console.log(dialogElement.current);
 
-  function closeDialog() {
-    dialogElement.current.close();
-  }
+//     dialogElement.current.showModal();
+//   }
 
-  return (
-    <div>
-      <dialog ref={dialogElement} id="dialogBox">
-        <header>
-          <h2 className="header">Confirmation</h2>
-          <button onClick={closeDialog} id="closeDialogHeader">
-            &#x2716
-          </button>
-        </header>
+//   function closeDialog() {
+//     dialogElement.current.close();
+//   }
 
-        <section>
-          <p>Are you sure you want to delete your account?</p>
-        </section>
+//   return (
+//     <div>
+//       <dialog ref={dialogElement} id="dialogBox">
+//         <header>
+//           <h2 className="header">Confirmation</h2>
+//           <button onClick={closeDialog} id="closeDialogHeader">
+//             &#x2716
+//           </button>
+//         </header>
 
-        <footer>
-          <button onClick={closeDialog} id="closeDialogFooter">
-            Close dialog
-          </button>
-          <button id="deleteButton">Yes, delete it</button>
-        </footer>
-      </dialog>
-      <section>
-        <button onClick={showDialog} id="openDialogBox">
-          Open dialog box
-        </button>
-      </section>
-    </div>
-  );
-}
+//         <section>
+//           <p>Are you sure you want to delete your account?</p>
+//         </section>
 
-export default DialogBox01;
+//         <footer>
+//           <button onClick={closeDialog} id="closeDialogFooter">
+//             Close dialog
+//           </button>
+//           <button id="deleteButton">Yes, delete it</button>
+//         </footer>
+//       </dialog>
+//       <section>
+//         <button onClick={showDialog} id="openDialogBox">
+//           Open dialog box
+//         </button>
+//       </section>
+//     </div>
+//   );
+// }
+
+// export default DialogBox01;

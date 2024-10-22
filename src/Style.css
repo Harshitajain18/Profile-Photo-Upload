@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -26,7 +26,7 @@
   font-weight: 500;
   display: inline-flex;
   /* justify-content: space-between; */
-  margin-right: 300px;
+  /* margin-right: 300px;
 }
 .ProfileUpload {
   border-radius: 75px;
@@ -74,14 +74,14 @@
 
   padding: 1.6rem;
   /* max-width: 400px; */
-}
+/* }
 
 .dialog-section {
   display: block;
   background-color: white;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 50px 50px -12px rgba(0, 0, 0, 0.25);
   backdrop-filter: black;
-}
+} */ 
 
 /* #dialog::backdrop {
   background-color: rgb(4, 4, 16);

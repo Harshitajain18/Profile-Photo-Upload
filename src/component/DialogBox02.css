@@ -24,7 +24,7 @@
   margin-top: 150px;
 }
 .profile {
-  font-size: medium;
+  font-size:medium;
   font-weight: 500;
   display: inline-flex;
   /* justify-content: space-between; */
@@ -43,25 +43,26 @@
   margin-top: 5px;
 }
 .delbtn {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
   margin-top: 5px;
-  margin-bottom: 5 px;
+  margin-bottom: 5px;
   color: red;
   margin-left: 290px;
+  display: inline;
 }
 
 .camera {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
 }
 .upload {
-    height: 40px;
-    width: 40px;
-    margin-left: 5px;
+  height: 40px;
+  width: 40px;
+  margin-left: 5px;
   margin-bottom: 5px;
   margin-top: 6px;
 }
