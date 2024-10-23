@@ -4,7 +4,7 @@ import "../component/DialogBox02.css";
 import { FaCameraRetro } from "react-icons/fa";
 import { AiTwotoneCloseCircle } from "react-icons/ai";
 
-const CustomWebcam = () => {
+const CustomWebcam = ({setShowCamera}) => {
   const webcamRef = useRef(null);
   const [imgSrc, setImgSrc] = useState(null);
   const [webcamOn, setWebcamOn] = useState(true);
@@ -16,6 +16,7 @@ const CustomWebcam = () => {
 
   const toggleWebcam = () => {
     setWebcamOn(false);
+    setShowCamera(false);
     if (webcamOn) {
       setImgSrc(null);
     }

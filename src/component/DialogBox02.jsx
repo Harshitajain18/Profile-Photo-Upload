@@ -70,7 +70,7 @@ function DialogBox02() {
       <h1 className="heading">PROFILE PHOTO UPLOAD</h1>
       <div>
         {!ShowDialog && profilePhoto ? (
-          <img src={profilePhoto} alt="" className="profile-image" />
+          <img src={profilePhoto} alt="" onClick={OpenDialog} className="profile-image" />
         ) : (
           <button className="AddPhotoBtn" onClick={OpenDialog}>
             Add Photo
@@ -122,7 +122,7 @@ function DialogBox02() {
           </div>
         </div>
       )}
-      {ShowCamera && <CustomWebcam />}
+      {ShowCamera && <CustomWebcam setShowCamera={setShowCamera} />}
     </>
   );
 }
