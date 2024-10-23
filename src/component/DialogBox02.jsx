@@ -29,27 +29,48 @@ function DialogBox02() {
     fileUploadRef.current.click();
   };
 
-  const uploadImageDisplay = e => {
+  const uploadImageDisplay = (e) => {
+    /* e.target.files[0] gets the first file the user selected (since the input may allow multiple files). 
+    The selected file is stored in the file variable.
+    If the user doesn't select any files, this value will be undefined */
     const file = e.target.files[0];
+
     if (file) {
+      /* A new "FileReader" object is created and stored in the reader variable. 
+    This is a built-in JavaScript API that reads files (like images, text files, etc.) 
+    from the user's device. */
+
       const reader = new FileReader();
-      const {current} = fileUploadRef;
+
+      /* This uses destructuring to extract the current property from the fileUploadRef reference.
+       current points to the DOM element (likely an <img> element) 
+       where the uploaded image will be displayed.
+      */
+      const { current } = fileUploadRef;
+
       current.file = file;
       reader.onload = (e) => {
-          current.src = e.target.result;
-          setProfilePhoto(e.target.result);
-      }
+      /* Once the file is read, e.target.result contains the file's data in a format called a data URL 
+      (which can be displayed as an image). This line sets the src attribute of the current element
+      (the image) to this data URL, making the image appear on the screen. */
+        current.src = e.target.result;
+
+        setProfilePhoto(e.target.result);
+      };
       reader.readAsDataURL(file);
-      
     }
+  };
+
+  const DeletePhoto = () => {
+    setProfilePhoto(null);
   };
 
   return (
     <>
       <h1 className="heading">PROFILE PHOTO UPLOAD</h1>
       <div>
-        {profilePhoto ? (
-          <img src={profilePhoto} className="profile-image"/>
+        {!ShowDialog && profilePhoto ? (
+          <img src={profilePhoto} alt="" className="profile-image" />
         ) : (
           <button className="AddPhotoBtn" onClick={OpenDialog}>
             Add Photo
@@ -65,12 +86,12 @@ function DialogBox02() {
             <div className="dialog-section__header">
               <h2 className="dialog-section__title">Profile Photo</h2>
               <button onClick={CloseDialog} className="dialog-section__close">
-                <AiTwotoneCloseCircle size={20} />
+                <AiTwotoneCloseCircle size={25} />
               </button>
             </div>
             <div className="dialog-section__middle">
               {profilePhoto ? (
-                <img src={profilePhoto} className="profile-image" />
+                <img src={profilePhoto} alt="" className="profile-image" />
               ) : (
                 <div className="dialog-section__image">
                   No profile photo uploaded
@@ -94,7 +115,7 @@ function DialogBox02() {
                   <FaCamera size={25} />
                 </button>
               </div>
-              <button className="delbtn">
+              <button className="delbtn" onClick={DeletePhoto}>
                 <AiTwotoneDelete size={25} />
               </button>
             </div>
